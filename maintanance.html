@@ -1,21 +1,139 @@
 <!doctype html>
-<title>Site Maintenance</title>
-<style>
-  body { text-align: center; padding: 150px; }
-  h1 { font-size: 50px; }
-  body { font: 20px Helvetica, sans-serif; color: #333; }
-  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-  a { color: #dc8100; text-decoration: none; }
-  a:hover { color: #333; text-decoration: none; }
-  body{ 
-    background-color: rgb(238, 219, 250);
-  }
-</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Maintenance</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1506748686214e9df14a0d8b2c5d5586c8b2f8c2b67a') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
 
-<article>
-    <h1>We&rsquo;ll be back soon!</h1>
-    <div>
-        <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="mailto:asifmohamed.r@gmail.com">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
-        <p>&mdash; ASIF MOHAMED MOHIDEEN</p>
-    </div>
-</article>
+        article {
+            background: rgba(0, 0, 0, 0.7); /* Dark overlay for better readability */
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f7d47c; /* Accent color */
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin: 1rem 0;
+        }
+
+        a {
+            color: #f7d47c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .countdown {
+            margin: 2rem 0;
+        }
+
+        .timer {
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            font-weight: bold;
+        }
+
+        .timer span {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        @media (max-width: 600px) {
+            .timer {
+                flex-direction: column;
+            }
+
+            .timer span {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>We'll Be Back Soon!</h1>
+        <p>Sorry for the inconvenience but we’re performing some maintenance at the moment. If you need to, you can always <a href="mailto:asifmohamed.r@gmail.com">contact us</a>. Otherwise, we’ll be back online shortly!</p>
+        <div class="countdown">
+            <h2>Estimated Time Remaining:</h2>
+            <div id="timer" class="timer">
+                <span id="days">00</span> Days
+                <span id="hours">00</span> Hours
+                <span id="minutes">00</span> Minutes
+                <span id="seconds">00</span> Seconds
+            </div>
+        </div>
+        <footer>
+            <p>&mdash; ASIF MOHAMED MOHIDEEN</p>
+        </footer>
+    </article>
+    <script>
+        // Countdown Timer Script
+        const countdown = () => {
+            const endDate = new Date('2024-08-10T00:00:00').getTime();
+            const timer = document.getElementById('timer');
+
+            const updateTimer = () => {
+                const now = new Date().getTime();
+                const distance = endDate - now;
+
+                if (distance < 0) {
+                    timer.innerHTML = "The site is live!";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            };
+
+            setInterval(updateTimer, 1000);
+        };
+
+        countdown();
+    </script>
+</body>
+</html>
