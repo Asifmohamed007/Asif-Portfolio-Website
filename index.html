@@ -112,18 +112,16 @@
 
     <div id="preloader">
         <div class="code-box">
-            <span class="code-line"><span style="color: white;">const</span> <span class="var">system</span> = "Initializing system...";</span>
-            <span class="code-line"><span style="color: white;">const</span> <span class="var">portfolio</span> = "Loading professional portfolio...";</span>
-            <span class="code-line"><span style="color: white;">const</span> <span class="var">skills</span> = "Fetching frontend skills...";</span>
-            <span class="code-line"><span style="color: white;">const</span> <span class="var">experience</span> = "Compiling experience...";</span>
-            <span class="code-line"><span style="color: white;">const</span> <span class="var">ui/ux</span> = "Optimizing UI/UX...";</span>
-            <span class="code-line"><span style="color: white;">const</span> <span class="var">deploy</span> = "Deploying interactive elements...";</span>
-            <span class="code-line"><span style="color: white;">const</span> <span class="var">status</span> = "Portfolio Ready! 🚀";</span>
+            <span class="code-line"><span class="keyword">const</span> <span class="var">system</span> = "Initializing system...";</span>
+            <span class="code-line"><span class="keyword">const</span> <span class="var">portfolio</span> = "Loading professional portfolio...";</span>
+            <span class="code-line"><span class="keyword">const</span> <span class="var">skills</span> = "Fetching frontend skills...";</span>
+            <span class="code-line"><span class="keyword">const</span> <span class="var">experience</span> = "Compiling experience...";</span>
+            <span class="code-line"><span class="keyword">const</span> <span class="var">uiux</span> = "Optimizing UI/UX...";</span>
+            <span class="code-line"><span class="keyword">const</span> <span class="var">deploy</span> = "Deploying interactive elements...";</span>
+            <span class="code-line"><span class="keyword">const</span> <span class="var">status</span> = "Portfolio Ready! 🚀";</span>
         </div>
         <div class="grid-overlay"></div>
     </div>
-    
-    
     
     <style>
     /* Full-Screen Preloader */
@@ -144,13 +142,15 @@
     
     /* Code Box */
     .code-box {
-        font-size: 18px;
+        font-size: 1.2rem;
         background: rgba(30, 32, 36, 0.9);
         padding: 20px 30px;
         border-radius: 10px;
         border: 1px solid #ff014f;
         box-shadow: 0 0 25px rgba(255, 1, 79, 0.7);
         animation: glow 1.5s infinite alternate;
+        max-width: 90%;
+        text-align: left;
     }
     
     /* Code Style */
@@ -163,14 +163,8 @@
         width: 0;
         animation: typing 2s steps(20) forwards, blink 0.7s infinite;
     }
-    .indent { margin-left: 20px; }
-    .indent2 { margin-left: 40px; }
+    .keyword { color: white; }
     .var { color: #00ffcc; }
-    .dots::after {
-        content: "...";
-        display: inline-block;
-        animation: dots 1s infinite steps(1);
-    }
     
     /* Grid Overlay Effect */
     .grid-overlay {
@@ -199,11 +193,6 @@
         0% { background-position: 0 0; }
         100% { background-position: 40px 40px; }
     }
-    @keyframes dots {
-        0% { content: "."; }
-        33% { content: ".."; }
-        66% { content: "..."; }
-    }
     
     /* Line-by-Line Reveal */
     .code-line:nth-child(1) { animation-delay: 0.2s; }
@@ -213,8 +202,6 @@
     .code-line:nth-child(5) { animation-delay: 1.8s; }
     .code-line:nth-child(6) { animation-delay: 2.2s; }
     .code-line:nth-child(7) { animation-delay: 2.6s; }
-    .code-line:nth-child(8) { animation-delay: 3s; }
-    .code-line:nth-child(9) { animation-delay: 3.4s; }
     
     /* Hover Effect */
     #preloader:hover .code-box {
@@ -224,16 +211,29 @@
         transition: all 0.3s ease-in-out;
     }
     
-    /* Preloader Hide on Load */
+    /* Media Queries for Responsive Design */
+    @media (max-width: 768px) {
+        .code-box {
+            font-size: 1rem;
+            padding: 15px 20px;
+        }
+    }
+    @media (max-width: 480px) {
+        .code-box {
+            font-size: 0.9rem;
+            padding: 10px 15px;
+        }
+    }
     </style>
     
     <script>
     window.addEventListener("load", function () {
         setTimeout(function () {
             document.getElementById("preloader").style.display = "none";
-        }, 6000); // 4 seconds delay before removing preloader
+        }, 6000); // 6 seconds delay before removing preloader
     });
     </script>
+    
     
     
 
