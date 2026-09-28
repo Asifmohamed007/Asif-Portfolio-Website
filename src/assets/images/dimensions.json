@@ -1,0 +1,114 @@
+{
+ "logo/logo-large.webp": {
+  "width": 2621,
+  "height": 2599
+ },
+ "logo/logo-small.webp": {
+  "width": 2032,
+  "height": 1691
+ },
+ "projects/card-own-projects.webp": {
+  "width": 1620,
+  "height": 1080
+ },
+ "projects/card-college-projects.webp": {
+  "width": 1620,
+  "height": 1080
+ },
+ "contact/contact.webp": {
+  "width": 500,
+  "height": 342
+ },
+ "projects/spotstar-login.webp": {
+  "width": 1919,
+  "height": 911
+ },
+ "projects/spotstar-3.webp": {
+  "width": 1898,
+  "height": 909
+ },
+ "projects/spotstar-5.webp": {
+  "width": 1919,
+  "height": 910
+ },
+ "projects/shopsy-main.webp": {
+  "width": 1919,
+  "height": 906
+ },
+ "projects/shopsy-2.webp": {
+  "width": 1919,
+  "height": 906
+ },
+ "projects/shopsy-3.webp": {
+  "width": 1919,
+  "height": 906
+ },
+ "projects/gocar-hire-1.webp": {
+  "width": 1919,
+  "height": 910
+ },
+ "projects/gocar-hire-2.webp": {
+  "width": 1890,
+  "height": 908
+ },
+ "projects/gocar-hire-3.webp": {
+  "width": 1907,
+  "height": 908
+ },
+ "projects/anuj-tiles-1.webp": {
+  "width": 1915,
+  "height": 949
+ },
+ "projects/anuj-tiles-2.webp": {
+  "width": 1910,
+  "height": 944
+ },
+ "projects/anuj-tiles-3.webp": {
+  "width": 1898,
+  "height": 955
+ },
+ "projects/gaming-portfolio-1.webp": {
+  "width": 1920,
+  "height": 946
+ },
+ "projects/gaming-portfolio-3.webp": {
+  "width": 1920,
+  "height": 951
+ },
+ "projects/gaming-portfolio-4.webp": {
+  "width": 1920,
+  "height": 949
+ },
+ "projects/bike-bazaar-1.webp": {
+  "width": 1903,
+  "height": 952
+ },
+ "projects/bike-bazaar-2.webp": {
+  "width": 1905,
+  "height": 952
+ },
+ "projects/bike-bazaar-3.webp": {
+  "width": 1902,
+  "height": 951
+ },
+ "projects/ems-siren-visionary-1.webp": {
+  "width": 1920,
+  "height": 1080
+ },
+ "projects/ems-siren-visionary-2.webp": {
+  "width": 1920,
+  "height": 1079
+ },
+ "projects/school-registration-1.webp": {
+  "width": 600,
+  "height": 300
+ },
+ "projects/school-registration-2.webp": {
+  "width": 2834,
+  "height": 1472
+ },
+ "projects/school-registration-3.webp": {
+  "width": 1024,
+  "height": 576
+ }
+}

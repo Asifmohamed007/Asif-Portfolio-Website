@@ -1,0 +1,40 @@
+/* ---- Preloader (was an inline <style> inside document.write) ---- */
+#preloader { position: fixed; width: 100%; height: 100%; background: linear-gradient(145deg, #1e2024, #23272b); display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 9999; font-family: "Courier New", monospace; color: #ff014f; overflow: hidden; }
+.code-box { font-size: 1.2rem; background: rgba(30, 32, 36, 0.9); padding: 20px 30px; border-radius: 10px; border: 1px solid #ff014f; box-shadow: 0 0 25px rgba(255, 1, 79, 0.7); animation: glow 1.5s infinite alternate; max-width: 90%; text-align: left; }
+.code-line { display: block; white-space: nowrap; overflow: hidden; border-right: 2px solid #ff014f; opacity: 0; width: 0; animation: typing 2s steps(20) forwards, blink 0.7s infinite; }
+.keyword { color: white; }
+.var { color: #00ffcc; }
+.grid-overlay { position: absolute; width: 100%; height: 100%; background: linear-gradient(to right, rgba(255, 1, 79, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 1, 79, 0.1) 1px, transparent 1px); background-size: 40px 40px; animation: grid-move 4s linear infinite; }
+@keyframes typing { 0% { width: 0; opacity: 1; } 100% { width: 100%; opacity: 1; } }
+@keyframes blink { 50% { border-color: transparent; } }
+@keyframes glow { 0% { box-shadow: 0 0 20px rgba(255, 1, 79, 0.7); } 100% { box-shadow: 0 0 30px rgba(255, 1, 79, 1); } }
+@keyframes grid-move { 0% { background-position: 0 0; } 100% { background-position: 40px 40px; } }
+.code-line:nth-child(1) { animation-delay: 0.2s; }
+.code-line:nth-child(2) { animation-delay: 0.6s; }
+.code-line:nth-child(3) { animation-delay: 1s; }
+.code-line:nth-child(4) { animation-delay: 1.4s; }
+.code-line:nth-child(5) { animation-delay: 1.8s; }
+.code-line:nth-child(6) { animation-delay: 2.2s; }
+.code-line:nth-child(7) { animation-delay: 2.6s; }
+#preloader:hover .code-box { box-shadow: 0 0 40px rgba(255, 1, 79, 1); border-color: #00ffcc; transform: scale(1.05); transition: all 0.3s ease-in-out; }
+@media (max-width: 768px) { .code-box { font-size: 1rem; padding: 15px 20px; } }
+@media (max-width: 480px) { .code-box { font-size: 0.9rem; padding: 10px 15px; } }
+
+/* ---- WhatsApp icon (was an inline <style> in the contact section) ---- */
+.whatsapp-icon { display: inline-block; color: #c9c8c8; font-size: 22px; transition: color 0.3s ease; }
+.whatsapp-icon:hover { color: #c9c8c8; }
+
+/* ---- Hero name: now the page's <h1> for SEO (it was an <h3>).
+   The "h3" class gives it the old h3 styles; these neutralise the template's
+   h1-only rules so it looks exactly as before. ---- */
+.slider-style-6 .banner-inner h1.h3 { margin-bottom: 20px; }
+@media only screen and (max-width: 991px) {
+  .slider-style-6.web-developer .banner-inner h1.fs--100 { font-size: 120px !important; }
+}
+@media (max-width: 480px) {
+  .slider-style-6.web-developer .banner-inner.text-center h1.fs--100 { font-size: 50px !important; }
+}
+
+/* ---- Images now carry width/height attributes (reserves space, no layout jump).
+   The template sizes the small logo by height only, so let its width follow. ---- */
+.logo img { width: auto; }

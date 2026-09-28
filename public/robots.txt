@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /maintanance.html
+
+Sitemap: https://asifmohamed-portfolio.netlify.app/sitemap.xml
